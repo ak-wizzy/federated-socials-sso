@@ -3,13 +3,13 @@
   "debug": false,
 
   "sp": {
-    "entityId": "https://socials-sso.aktechnoservices.com/metadata",
+    "entityId": "https://identity-integration.aktechnoservices.com/metadata",
     "assertionConsumerService": {
-      "url": "https://socials-sso.aktechnoservices.com/acs",
+      "url": "https://identity-integration.aktechnoservices.com/acs",
       "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
     },
     "singleLogoutService": {
-      "url": "https://socials-sso.aktechnoservices.com/slo",
+      "url": "https://identity-integration.aktechnoservices.com/slo",
       "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
     },
     "x509cert": "",

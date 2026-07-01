@@ -1,7 +1,7 @@
 services:
   federated-socials-sso:
-    image: akwizzy/pilot-repo:federated-socials-sso
-    container_name: federated-socials-sso
+    image: akwizzy/pilot-repo:identity-integration
+    container_name: identity-integration
     restart: unless-stopped
 
     environment:
@@ -17,11 +17,11 @@ services:
 
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.socials-sso.rule=Host(`socials-sso.aktechnoservices.com`)"
-      - "traefik.http.routers.socials-sso.entrypoints=websecure"
-      - "traefik.http.routers.socials-sso.tls.certresolver=cloudflare"
-      - "traefik.http.routers.socials-sso.middlewares=secured-chain@docker"
-      - "traefik.http.services.socials-sso.loadbalancer.server.port=5000"
+      - "traefik.http.routers.identity-integration.rule=Host(`identity-integration.aktechnoservices.com`)"
+      - "traefik.http.routers.identity-integration.entrypoints=websecure"
+      - "traefik.http.routers.identity-integration.tls.certresolver=cloudflare"
+      - "traefik.http.routers.identity-integration.middlewares=secured-chain@docker"
+      - "traefik.http.services.identity-integration.loadbalancer.server.port=5000"
 
     networks:
       - reverse-proxy
